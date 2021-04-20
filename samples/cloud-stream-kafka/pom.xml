@@ -10,7 +10,7 @@
 		<relativePath>../maven-parent/pom.xml</relativePath>
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>kafka</artifactId>
+	<artifactId>cloud-stream-kafka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>kafka</name>
 	<description>GraalVM Apache Kafka Demo</description>
@@ -34,8 +34,8 @@
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.kafka</groupId>
-			<artifactId>spring-kafka</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-binder-kafka</artifactId>
 		</dependency>
 	</dependencies>
 
