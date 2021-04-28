@@ -1,3 +1,3 @@
-## Apache Kafka "Hello, world!" App
+## Spring Cloud Stream Kafka Streams binder hello world
 
-Spring Boot project with Apache Kafka.
+Spring Cloud Stream Kafka Streams binder hello world.
