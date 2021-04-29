@@ -11,12 +11,14 @@ import org.apache.kafka.common.serialization.ByteArraySerializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.stream.binder.kafka.config.KafkaBinderConfiguration;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.context.annotation.Bean;
 import org.springframework.integration.core.GenericSelector;
 import org.springframework.integration.handler.GenericHandler;
 import org.springframework.integration.transformer.GenericTransformer;
 import org.springframework.nativex.hint.NativeHint;
+import org.springframework.nativex.hint.ResourceHint;
 import org.springframework.nativex.hint.TypeHint;
 import org.springframework.util.StringUtils;
 
@@ -28,12 +30,14 @@ import org.springframework.util.StringUtils;
 						GenericTransformer.class,
 						GenericHandler.class,
 						ByteArrayDeserializer.class,
-						ByteArraySerializer.class
+						ByteArraySerializer.class,
+						KafkaBinderConfiguration.class
 				})
 		})
 @TypeHint(typeNames = {
 		"org.springframework.cloud.stream.function.BindableFunctionProxyFactory",
 })
+@ResourceHint(patterns = "META-INF/spring.binders")
 public class SpringCloudStreamKafkaApplication {
 
 	@Autowired

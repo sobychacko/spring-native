@@ -14,6 +14,7 @@ import org.springframework.nativex.hint.InitializationHint;
 import org.springframework.nativex.hint.InitializationTime;
 import org.springframework.nativex.hint.NativeHint;
 import org.springframework.nativex.hint.ProxyHint;
+import org.springframework.nativex.hint.ResourceHint;
 import org.springframework.nativex.hint.TypeHint;
 
 @SpringBootApplication
@@ -33,6 +34,7 @@ import org.springframework.nativex.hint.TypeHint;
 		"org.springframework.aop.framework.Advised",
 		"org.springframework.core.DecoratingProxy"
 })
+@ResourceHint(patterns = "META-INF/spring.binders")
 public class SpringCloudStreamKafkaStreamsApplication {
 
 	public static void main(String[] args) {
